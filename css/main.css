@@ -1,0 +1,451 @@
+@font-face {
+     font-family: material;
+     src: url('../font/MaterialIcons-Regular.ttf');
+}
+
+@font-face {
+     font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+body{
+     background: url(../img/fundo\ soberano.jpg);
+     background-size: 100%;
+     background-position: center ;
+     
+}
+
+a{
+     color:inherit;
+}
+
+.material-icon{
+     font-family: material;
+}
+
+section.inicio{
+     text-align: center;
+}
+
+section.inicio div{
+     text-align: right;
+     margin: 3vh 3vw 18vh 0;
+}
+
+section.inicio div button{
+     background: none;
+     border: none;
+     color: #9b3e01;
+     font-size: 3em;
+}
+
+section.inicio h1{
+     font-family: harry;
+     font-size: 4em;
+     background: linear-gradient(#ff6804, #080808);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.inicio h2{
+     margin-top: 1%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+
+section.inicio p{
+     margin: 2vh 0;
+}
+
+section.inicio p img{
+     height: 10vh;
+     position: relative;
+}
+
+section.inicio p button{
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     color:rgb(124, 36, 1);
+     font-size: 2em;
+     padding: 2vh 2vw;
+     font-family: harry;
+}
+Section.ins{
+     display: none;
+}
+/*Section.ins{
+     width:90vw;
+     margin:5vh auto 0 auto;
+}*/
+section.ins header{
+     display: flex;
+     justify-content: space-between;
+     font-size: 2em;
+     color: #7a3201;
+     font-family: harry;
+}
+section.ins h4{
+     font-family: harry;
+     font-size: 4em;
+     text-align: center;
+     background: linear-gradient(#ff6804, #080808);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; 
+     margin-top: 50px;    
+     
+}
+section.ins img{
+     height: 30vh;
+     padding: 50px 0px 50px 580px;
+     position: relative;
+     text-align: center;
+}
+
+section.ins div.instrucoes{
+     text-align: center;
+     background-color: #ff6804;
+     margin-left: 400px;
+     margin-right: 400px;
+     padding: 30px 0px 30px 0px;
+
+}
+
+section.ins div.instrucoes h5{
+     color: #7a3201;
+     font-size: 25px;
+}
+
+section.ins button.btn-jogar{   
+     text-align: center;
+     font-size: 2em;
+     padding: 2vh 2vw;
+     font-family: harry;
+     margin-top: 20px;
+     margin-left: 620px;
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     color:rgb(124, 36, 1);
+     
+}
+
+section.jogo{
+     display: none;
+}
+
+section.jogo{
+     width: 90vw;
+     margin: 5vh auto 0 auto;
+}
+
+section.jogo header{
+     display: flex;
+     justify-content: space-between;
+     font-size: 2em;
+     color: #7a3201;
+     font-family: harry;
+}
+
+section.jogo div.campo{
+     display: flex;
+     width: 90vw;
+     height: 80vh;
+     margin: 5vh 0 0 0;
+     box-shadow: 6px 6px 2px #7a3201;
+     background: url(../img/fundo.jpg) center center;
+     background-size: 100% auto;
+}
+
+section.jogo div.moscaa{
+     width: 142px;
+     height: 80px;
+     background: url(../img/Mosca.gif);
+     background-size: 100%;
+     position: relative;
+}
+
+section.jogo div.moscaa2{
+     width: 142px;
+     height: 80px;
+     background: url(../img/Mosca.gif);
+     background-size: 100%;
+     position: relative;
+}
+
+section.jogo div.moscaa3{
+     width: 142px;
+     height: 80px;
+     background: url(../img/Mosca.gif);
+     background-size: 100%;
+     position: relative;
+}
+
+
+section.jogo div.moscaa span{
+     display: block;
+     position: relative;
+     top: 36%;
+     width: 30%;
+     height: 40%;
+     border-radius: 50%;
+     margin: 0 auto 0 auto;
+}
+
+section.jogo div.moscaa2 span{
+     display: block;
+     position: relative;
+     top: 36%;
+     width: 30%;
+     height: 40%;
+     border-radius: 50%;
+     margin: 0 auto 0 auto;
+}
+
+section.jogo div.moscaa3 span{
+     display: block;
+     position: relative;
+     top: 36%;
+     width: 30%;
+     height: 40%;
+     border-radius: 50%;
+     margin: 0 auto 0 auto;
+}
+
+section.nivel{
+     display: none;
+     text-align: center;
+     margin-top: 12%;
+}
+
+section.nivel button{
+     color:rgb(124, 36, 1);
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     font-size: 2em;
+     padding: 2vh 2vw;
+     font-family: harry;
+     text-decoration:none;
+}
+
+section.nivel h1{
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #080808);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+section.nivel p img{
+     height: 15vh;
+     position: relative;
+
+}
+section.nivel p{
+     margin: 2vh 0;
+
+}
+
+section.nivel p button{
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     color:rgb(124, 36, 1);
+     font-size: 2em;
+     padding: 3vh 3vw;
+     font-family: harry;
+}
+
+section.nivel h2{
+     margin-top: 3%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.nivel h3{
+     margin-top: 1%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#e9a800, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.nivel2{
+     display: none;
+     text-align: center;
+     margin-top: 12%;
+}
+
+section.nivel2 button{
+     color:rgb(124, 36, 1);
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     font-size: 2em;
+     padding: 2vh 2vw;
+     font-family: harry;
+     text-decoration:none;
+}
+
+section.nivel2 h1{
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #080808);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+section.nivel2 p img{
+     height: 15vh;
+     position: relative;
+
+}
+section.nivel2 p{
+     margin: 2vh 0;
+
+}
+
+section.nivel2 p button{
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     color:rgb(124, 36, 1);
+     font-size: 2em;
+     padding: 3vh 3vw;
+     font-family: harry;
+}
+
+section.nivel2 h2{
+     margin-top: 3%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.nivel2 h3{
+     margin-top: 1%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#e9a800, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.nivel2 h4{
+     margin-top: 1%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#e9a800, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+
+
+section.ganhou{
+     display: none;
+     text-align: center;
+     margin-top: 12%;
+}
+
+
+
+section.ganhou h1{
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #080808);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+section.ganhou p img{
+     height: 15vh;
+     position: relative;
+
+}
+section.ganhou p{
+     margin: 2vh 0;
+
+}
+
+section.ganhou p button {
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     color:rgb(124, 36, 1);
+     font-size: 2em;
+     padding: 3vh 3vw;
+     font-family: harry;
+     text-decoration:none;
+}
+
+section.ganhou h2{
+     margin-top: 3%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.ganhou h3{
+     margin-top: 1%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#e9a800, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+
+section.perdeu{
+     display: none;
+     text-align: center;
+     margin-top: 12%;
+}
+
+section.perdeu p button{
+     background: linear-gradient(to top, #ff6804, #ffd241);
+     box-shadow: 4px 4px 2px #7a3201;
+     border: none;
+     color:rgb(124, 36, 1);
+     font-size: 2em;
+     padding: 3vh 3vw;
+     font-family: harry;
+     text-decoration:none;
+}
+
+section.perdeu h1{
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #080808);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+section.perdeu p{
+     margin: 2vh 0;
+}
+
+
+section.perdeu p img{
+     height: 10vh;
+     position: relative;
+}
+
+section.perdeu h2{
+     margin-top: 3%;
+     font-family: harry;
+     font-size: 2em;
+     background: linear-gradient(#ff6804, #ffd241);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+

@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CATCH THE FLY</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="font/material-icons.css"> 
+</head>
+<body> 
+  <section class="inicio">
+    <div><button class= "material-icon som">volume_off</button></div>
+    <h1>CATCH THE FLY</h1>
+    <p><img class="moscaa" src="img/Mosca.gif"></p>
+    <p><button class="btn-inicio">INICIAR</button></p>
+  </section>
+
+  <section class="ins">
+    <h4>INSTRUÇÕES</h4>
+    <p><img class="moscaa" src="img/Mosca.gif"></p>
+  
+    <p><div class='instrucoes'> 
+        <h5>Sua sopa está pronta, <br>
+      mas existem moscas muito interessadas nela,<br>
+      mate-as e consiga comer tranquilamente. <br>
+      OBS: Clique sobre as moscas. <br> </h5> </div></p> 
+
+    <p><button class="btn-jogar" >Jogar</button></p>
+  </section>
+
+  <section class="jogo">
+    <header>
+      <h2 class="pontos">PONTOS: <span>0</span></h2>
+      <h2 class="tempo"><span>0</span>s</h2>
+    </header>
+
+    <div class="campo">
+      <div class="moscaa"><span></span></div>
+    </div>
+  </section>
+  <section class="nivel">
+    <p><img class="moscaa" src="img/Meleca.png"></p>
+    <h1>Parabéns, vamos para o próximo nível?!</h1>
+    <p><button class="nivel"><a href="index2.html" style="text-decoration:none">NÍVEL 2</a></button></p>
+  </section>
+
+  <section class="ganhou">
+    <p><img class="moscaa" src="img/Meleca.png"></p>
+    <h1>Parabéns, você concluiu com sucesso!</h1>
+    <p><button class="novamente">JOGAR NOVAMENTE</button></p>
+  </section>
+
+  <section class="perdeu">
+    <p><img class="moscaa" src="img/Mosca.gif"></p>
+    <h1>Não foi dessa vez, seja mais rápido!</h1>
+    <p><button class="novamente">JOGAR NOVAMENTE</button></p>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var resulTempo = 0;
+    var resulPontos = 0;
+    function load(){
+      musicaTemaClassico = new Audio("musica/Mosca.mp3");
+
+      setInterval(function(){
+        $("section.inicio img.mosca").animate({top:"-15px"},1500).animate({top:"0px"},1500);
+      },3000);
+    }
+    load();
+
+    $("section.inicio button.btn-inicio").on("click", function(){
+      $("section").hide();
+      $("section.ins").show();
+      musicaTemaInstrucoes= new Audio("musica/Instrucoes.mp3");
+        musicaTemaInstrucoes.play();
+    });
+
+    $("section.inicio button.som").on("click", function(){
+      textoDoBotao = $(this).text();
+      if(textoDoBotao == "volume_off"){
+        $(this).text("volume_up");
+      }else{
+        musicaTemaClassico.pause();
+        $(this).text("volume_off");
+      }
+    });
+
+
+//BotãoJogar
+    $("section.ins button.btn-jogar").on("click", function(){
+      $("section.ins").hide();
+      $("section.jogo").show();
+      musicaTemaInstrucoes.pause();
+
+      musicaTemaJogo = new Audio("musica/Mosca.mp3");
+      musicaTemaJogo.play();
+
+
+      contagemDeTempo = setInterval(function(){
+        var conteudoTempo = parseInt($("h2.tempo span").text());
+        var soma = conteudoTempo + 1;
+        resulTempo = soma;
+        $("h2.tempo span").text(soma);
+
+        if ( resulTempo > 10 ) {
+        $("section.jogo").hide();
+        $("section.perdeu").show();
+
+        musicaTemaJogo.pause();
+        musicaPerdeu = new Audio('musica/game-over-acarde.wav');
+        musicaPerdeu.play();
+      
+        $("section.perdeu button.novamente").on("click", function() {
+          location.reload();
+        });
+      }
+    }, 500);
+
+      larguraDoCampo = $("div.campo").width();
+      alturaDoCampo = $("div.campo").height();
+
+      larguraDoMosca = $("div.moscaa").width();
+      alturaDoMosca = $("div.moscaa").height();
+
+      deslocamento = setInterval(function(){
+        distanciaDoTopo = Math.round(Math.random()*(alturaDoCampo-alturaDoMosca));
+        distanciaDaEsquerda = Math.round(Math.random()*(larguraDoCampo-larguraDoMosca));
+        $("section.jogo div.moscaa").animate({top:distanciaDoTopo+"px", left:distanciaDaEsquerda+"px"},3000);
+      },3000);
+    });
+
+    $("section.jogo div.moscaa span").on("click", function(){
+      var conteudoPontos = parseInt($("h2.pontos span").text());
+      var soma = conteudoPontos + 1;
+      resulPontos = soma;
+      $("h2.pontos span").text(soma);
+      
+    });
+
+    vitoria = setInterval(function(){
+      if (resulPontos >= 5 && resulTempo < 10){
+
+        $("section.jogo").hide();
+        $("section.nivel").show();
+
+        musicaTemaJogo.pause();
+        musicaGanhou = new Audio('musica/aplausos.mp3');
+        musicaGanhou.play();
+
+        $("section.nivel button.nivel").on("click", function() {
+        });
+      }
+    }, 500);
+
+  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
